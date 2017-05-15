@@ -18,11 +18,18 @@ class Appear extends Component {
   componentDidMount() {
     // watch for viewport entry
     const el = ReactDOM.findDOMNode(this);
-    this.watcher = inViewport(el, () => {
+    if (el) {
+      this.watcher = inViewport(el, () => {
+        this.setState({
+          inViewport: true
+        });
+      });
+    } else {
+      // fallback to visible
       this.setState({
         inViewport: true
       });
-    });
+    }
   }
   componentWillUnmount() {
     if (this.watcher) {
