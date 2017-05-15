@@ -3,7 +3,7 @@
   "description": "Trigger transitions on your components when they become visible in the viewport",
   "author": "Julien Bouquillon",
   "user": "revolunet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "karma start --",
