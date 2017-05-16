@@ -15,20 +15,19 @@ class Appear extends Component {
     children: React.PropTypes.object.isRequired,
     className: React.PropTypes.string
   }
+  setVisible = () => {
+    this.setState({
+      inViewport: true
+    });
+  }
   componentDidMount() {
     // watch for viewport entry
     const el = ReactDOM.findDOMNode(this);
     if (el) {
-      this.watcher = inViewport(el, () => {
-        this.setState({
-          inViewport: true
-        });
-      });
+      this.watcher = inViewport(el, this.setVisible);
     } else {
       // fallback to visible
-      this.setState({
-        inViewport: true
-      });
+      this.setVisible();
     }
   }
   componentWillUnmount() {
