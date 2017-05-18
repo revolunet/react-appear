@@ -9,10 +9,11 @@ See the [demo](http://revolunet.github.io/react-appear)
 ## Usage
 
 ```jsx
-const Example = () => (<Appear className='MyTransition'>
-                          <img src="http://placekitten.com/g/200/300"/>
-                       </Appear>)
-
+const Example = () => (
+  <Appear className='MyTransition'>
+    <img src="http://placekitten.com/g/200/300"/>
+  </Appear>
+)
 ```
 
 Initially, your component will be wrapped in `<div class="MyTransition"></div>`.
